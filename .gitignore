@@ -1,2 +1,9 @@
 *.class
 *.log
+.idea
+target
+spark-warehouse
+.sonar
+derby.log
+metastore_db
+*.iml
