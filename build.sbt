@@ -15,10 +15,11 @@ val junitVersion = "4.10"
 resolvers += Resolver.sonatypeRepo("releases")
 
 libraryDependencies ++= Seq(
-  "org.apache.spark" %% "spark-core"  % sparkVersion,
-  "org.apache.spark" %% "spark-sql"   % sparkVersion,
-  "org.apache.spark" %% "spark-hive"  % sparkVersion,
-  "junit"            % "junit"        % junitVersion  % Test
+  "org.apache.spark" %% "spark-core"               % sparkVersion,
+  "org.apache.spark" %% "spark-sql"                % sparkVersion,
+  "org.apache.spark" %% "spark-hive"               % sparkVersion,
+  "org.scalatest"    %  "scalatest_2.12"           % "3.0.5"      % "test",
+  "org.julienrf"     %% "play-json-derived-codecs" % "5.0.0"
 )
 
 cleanFiles += baseDirectory.value / "derby.log"
