@@ -15,3 +15,13 @@ def genLoyaltyCard: Gen[LoyaltyCard] = for {
 
 case class LoyaltyCard(cardNo: CardNumber, createdOn: LocalDate)
 val a = genLoyaltyCard.sample.get
+
+
+case class DatePair(valid_from: LocalDate, valid_to: LocalDate)
+
+def genValidDatePair: Gen[DatePair] = for {
+  from <- genLocalDate
+  to <- genLocalDate.retryUntil(_.isAfter(from))
+} yield DatePair(from, to)
+
+genValidDatePair.sample.get
