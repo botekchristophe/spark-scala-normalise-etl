@@ -18,7 +18,8 @@ libraryDependencies ++= Seq(
   "org.apache.spark" %% "spark-core"               % sparkVersion,
   "org.apache.spark" %% "spark-sql"                % sparkVersion,
   "org.apache.spark" %% "spark-hive"               % sparkVersion,
-  "org.scalatest"    %  "scalatest_2.12"           % "3.0.5"      % "test",
+  "org.scalatest"    %% "scalatest"                % "3.0.5"       % Test,
+  "org.scalacheck"   %% "scalacheck"               % "1.14.0",
   "org.julienrf"     %% "play-json-derived-codecs" % "5.0.0"
 )
 
