@@ -1,4 +1,4 @@
-package ca.botekchristophe.spark.utils.datagenerators
+package ca.botekchristophe.spark.utils.dynamo
 
 import java.sql.Date
 import java.time.LocalDate
